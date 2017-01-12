@@ -1,0 +1,8 @@
+<h1>Life Hack Info</h1>
+
+<h2><%= @hack.name %></h2>
+<p><%= @hack.body %></p>
+<p><%= image_tag @hack.image.url %></p>
+<%= link_to 'Go Back', hack_path %>
+<%= link_to 'Edit', edit_hack_path %>
+<%= link_to 'Delete', hack_path(@hack), method: :delete, data: { confirm: "are you sure you want to delete this Lifehack?"} %>

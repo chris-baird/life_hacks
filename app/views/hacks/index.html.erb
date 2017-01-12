@@ -1,0 +1,14 @@
+<h1>Index</h1>
+
+<hr>
+
+<ul>
+    <% @hacks.each do |hack| %>
+        <li><p><%= hack.name %></p></li>
+        <%= image_tag hack.image.url %>
+        <li><p><%= hack.body %></p></li>
+        <%= link_to 'View Life Hack', hack_path(hack) %>
+    <% end %>
+</ul>
+
+<%= link_to 'Create Life Hack', new_hack_path %>
