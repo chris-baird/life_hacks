@@ -1,9 +1,9 @@
-<%= form_for @hack, url: hacks_path, html: { multipart: true } do |form| %>
+<%= form_for @hack, html: { multipart: true } do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %><br>
 
   <%= form.label :body %>
-  <%= form.text_field :body %><br>
+  <%= form.text_area :body %><br>
 
   <%= form.file_field :image %><br><br>
 
