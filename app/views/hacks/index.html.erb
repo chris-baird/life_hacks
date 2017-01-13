@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
-<h1>Life Hacks</h1>
+<p id="notice" class="text-center"><%= notice %></p>
+<div class="jumbotron text-center">
+  <h1>Life Hacks</h1>
+</div>
 
 <hr>
 
-<ul>
+<div class="container">
+    <div class="row">
     <% @hacks.each do |hack| %>
-        <li><p><%= hack.name %></p></li>
-        <%= image_tag hack.image.url %>
-        <li><p><%= hack.body %></p></li>
-        <%= link_to 'View Life Hack', hack_path(hack) %>
+        <div class="col-md-3">
+          <p><%= hack.name %></p>
+          <%= image_tag hack.image.url, :class => 'img-responsive img-size' %>
+          <p><%= hack.body %></p>
+          <%= link_to 'View Life Hack', hack_path(hack) %>
+        </div>
     <% end %>
-</ul>
-
-<%= link_to 'Create Life Hack', new_hack_path %>
+    </div>
+</div>

@@ -51,3 +51,7 @@ gem "paperclip", "~> 5.0.0"
 
 gem "figaro"
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'bootstrap_form'  # if you want bootstrap forms!
+

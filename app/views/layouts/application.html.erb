@@ -5,22 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 </head>
 <body>
-  <p>
+
+  <ul class="nav nav-tabs">
     <% if current_user %>
-      Welcome, <%= current_user.name %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+      <li role="presentation" class="name-badge"><a href="#"> Welcome, <%= current_user.name %> </a></li>
+      <li role="presentation"><%= link_to 'Home', hacks_path %></li>
+      <li role="presentation"><%= link_to 'About', hacks_path %></li>
+      <li role="presentation" class="pull-right"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
     <% else %>
-      <%= link_to 'Log In', login_path %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <%= link_to 'Sign Up', new_user_path %>
+      <li role="presentation"><%= link_to 'Home', hacks_path %></li>
+      <li role="presentation"><%= link_to 'About', hacks_path %></li>
+      <li role="presentation" class="pull-right"><%= link_to 'Log In', login_path %></li>
+      <li role="presentation" class="pull-right"><%= link_to 'Sign Up', new_user_path %></li>
     <% end %>
-  </p>
+      <li role="presentation"><%= link_to 'Create Life Hack', new_hack_path %></li>
+  </ul>
 <div class="container">
-<%= yield %>
+  <%= yield %>
 </div>
+
 
 </body>
 </html>
