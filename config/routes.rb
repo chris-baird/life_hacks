@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   root "hacks#index"
-  resources :hacks
+  resources :hacks, shallow: true do
+    resources :comments
+  end
+
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]
