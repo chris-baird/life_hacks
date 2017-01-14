@@ -2,15 +2,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#show-container {
+  height: 300px;
+  width: 800px;
+}
+
+#hack-info-desc {
+  border: 2px solid black;
+}
+
 .img-size {
   height: 200px;
   width: 200px;
+}
+
+.index-test {
+  background-color: gray;
+  margin-bottom: 10px;
 }
 
 .hack-info-page {
   height: 400px;
   width: 400px;
 }
+
 
 
 
