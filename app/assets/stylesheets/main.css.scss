@@ -2,6 +2,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  // background-color: rgb(86,71,36);
+  // background-image: url('life.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  font-family: 'Lora', serif;
+  color: #DCA31B;
+}
+
+a {
+  color: #DCA31B;
+  font-size: 20px;
+}
+
 #show-container {
   height: 300px;
   width: 800px;
@@ -11,9 +25,45 @@
   border: 2px solid black;
 }
 
+.no-click {
+  font-weight: bold;
+  pointer-events: none;
+  cursor: default;
+}
+
+.main-wrap {
+  background-color: rgba(155,155,155,.8);
+}
+
+.nav-color {
+  color: white;
+}
+
+.title-wrap {
+  background-color: rgba(41,34,20, .8);
+  margin-bottom: 15px;
+  width: 400px;
+  box-shadow: 10px 10px 5px #080704;
+}
+
 .img-size {
-  height: 200px;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.thumb-wrapper {
+  background-color: rgba(52, 76, 32, .5);
+  margin: 17px;
   width: 200px;
+  box-shadow: 10px 10px 5px #080704;
+
+}
+
+.more-info {
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .index-test {
@@ -24,6 +74,15 @@
 .hack-info-page {
   height: 400px;
   width: 400px;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+.t-wrap {
+  background-color: rgb(41,34,20);
 }
 
 

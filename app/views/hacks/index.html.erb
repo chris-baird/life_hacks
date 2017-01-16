@@ -1,15 +1,25 @@
 <p id="notice" class="text-center"><%= notice %></p>
-<div class="jumbotron text-center">
-  <h1>Life Hacks</h1>
-</div>
 
-<div class="container">
-    <div class="row">
+<div class="container main-wrap">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="pull-left not-active"><a href="#">Sort By:</a></li>
+    <form class="navbar-form navbar-right " role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Search Life Hacks</button>
+    </form>
+    <li role="presentation" class="pull-right"><a href="#">Date</a></li>
+    <li role="presentation" class="pull-right"><a href="#">Alphabetic</a></li>
+    <li role="presentation" class="pull-right"><a href="#">Likes</a></li>
+  </ul>
+    <div class="row text-center t-wrap">
     <% @hacks.each do |hack| %>
-        <div class="col-md-3">
-          <h4><%= hack.name %></h4>
+        <div class="col-md-2 thumb-wrapper">
+          <h4><p>#<%= hack.name %></p></h4>
           <%= image_tag hack.image.url, :class => 'img-responsive img-size' %>
-          <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-primary btn-xs' %>
+          <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-primary btn-xs more-info center-block' %>
+          <h3><p>@<%= hack.user.name %></p></h3>
         </div>
     <% end %>
     </div>

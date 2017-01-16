@@ -6,17 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 <body>
 
   <ul class="nav nav-tabs">
     <% if current_user %>
-      <li role="presentation" class="name-badge"><a href="#"> Welcome, <%= current_user.name %> </a></li>
-      <li role="presentation"><%= link_to 'Home', hacks_path %></li>
+      <li role="presentation" class=""><%= link_to 'Life Hacks', hacks_path %></li>
       <li role="presentation"><%= link_to 'About', hacks_path %></li>
       <li role="presentation" class="pull-right"><%= link_to 'Log Out', session_path('dummy'), method: :delete %></li>
+      <li role="presentation" class="name-badge pull-right no-click"><a href="#"> Welcome, <%= current_user.name %> </a></li>
     <% else %>
-      <li role="presentation"><%= link_to 'Home', hacks_path %></li>
+      <li role="presentation" class=""><%= link_to 'Life Hacks', hacks_path %></li>
       <li role="presentation"><%= link_to 'About', hacks_path %></li>
       <li role="presentation" class="pull-right"><%= link_to 'Log In', login_path %></li>
       <li role="presentation" class="pull-right"><%= link_to 'Sign Up', new_user_path %></li>
