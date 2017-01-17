@@ -1,45 +1,46 @@
 <p id="notice"><%= notice %></p>
-<div class="container text-center">
-  <h1><%= @hack.name %></h1>
-</div>
-<div class="container show-wrapper">
-  <div id="show-container" class="container text-center hack-info-page">
+<div id="show-wrap-main" class="container main-wrap">
+  <div class="container text-center show-title">
+    <h2 id="show-name" class="text-center"><%= @hack.name %></h2>
+    <p class="text-center">by: <%= @hack.user.name %></p>
+  </div>
+    <div id="show-container" class="container text-center hack-info-page">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <% if @hack.user == current_user %>
           <%= link_to 'Edit', edit_hack_path %>
           <%= link_to 'Delete', hack_path(@hack), method: :delete, data: { confirm: "are you sure you want to delete this Lifehack?"} %>
         <% end %>
-        <p><%= image_tag @hack.image.url, class: "img-responsive" %></p>
+        <p><%= image_tag @hack.image.url, class: "img-responsive show-img center-block" %></p>
       </div>
-      <ul class="col-lg-6">
-        <h4>Comments</h4>
-        <hr>
-        <% @hack.comments.each do |c| %>
-          <li>
-            <div>
-              <p>@<%= c.user.name %> <small><%= c.body %></small></p>
-              <% if c.user == current_user %>
-                <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
-              <% end %>
-            </div>
-          </li>
-        <% end %>
-      </ul>
     </div>
-  </div>
-
-  <div id="hack-info-desc" class="col-lg-6">
-    <p><%= @hack.body %></p>
-  </div>
-
+    </div>
+    <div id="hack-info-desc" class="col-lg-12 text-center">
+      <h3>Description:</h3>
+      <p><%= @hack.body %></p>
+    </div>
   <div class="container">
+
+    <ul class="text-center col-md-12 comment-wrap">
+      <h3>Comments:</h3>
+      <hr>
+      <% @hack.comments.each do |c| %>
+        <li>
+          <div class="comment-body">
+            <p>@<%= c.user.name %><br> <small><%= c.body %></small></p>
+            <% if c.user == current_user %>
+              <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+
     <div class="row">
-      <div class="text-center">
-        <h3>Comment</h3>
+      <div class="center-block">
         <%= form_for [@hack, @comment] do |form| %>
-        <%= form.text_area :body, rows: '6', cols: '50' %><br>
-        <%= form.submit 'Submit Comment' %>
+        <%= form.text_area :body, rows: '6', cols: '50', class: "comment-input form-control", placeholder: 'Write a comment!' %><br>
+        <%= form.submit 'Submit Comment', id: "comment-btn", class: "center-block" %>
       </div>
     </div>
         <% end %>

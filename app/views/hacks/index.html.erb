@@ -15,7 +15,7 @@
     <div class="row text-center t-wrap">
     <% @hacks.each do |hack| %>
         <div class="col-md-2 thumb-wrapper">
-          <h4><p>#<%= hack.name %></p></h4>
+          <h4><p><%= hack.name %></p></h4>
           <%= image_tag hack.image.url, :class => 'img-responsive img-size' %>
           <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-primary btn-xs more-info center-block' %>
           <h3><p>@<%= hack.user.name %></p></h3>

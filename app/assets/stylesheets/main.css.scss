@@ -4,9 +4,9 @@
 
 body {
   // background-color: #343734;
-  background-image: url('wood.jpg');
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  background-image: url('ab.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Lora', serif;
   color: #DCA31B;
 }
@@ -16,13 +16,52 @@ a {
   font-size: 20px;
 }
 
+ul {
+  list-style: none;
+}
+
+#show-wrap-main {
+  padding: 0;
+}
+
+#show-name {
+  margin: 5px;
+}
+
 #show-container {
   height: 300px;
   width: 800px;
 }
 
 #hack-info-desc {
+  width: 100%;
+  background-color: rgb(43, 44, 46);
+  padding: 5px;
+}
+
+#comment-btn {
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+
+.show-img {
+  height: 500px;
+  width: 500px;
+  margin-top: 10px;
+  box-shadow: 10px 10px 5px #080704;
   border: 2px solid black;
+}
+
+.comment-input {
+  margin: 5px 0;
+  background-color: rgba(41,34,20, .8);
+  color: #BDBA93;
+}
+
+.comment-body {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
 }
 
 .no-click {
@@ -31,17 +70,18 @@ a {
   cursor: default;
 }
 
+.show-title {
+  width: 100%;
+  background-color: rgb(62, 65, 77);
+}
+
 .main-nav {
   background-color: rgba(43, 44, 46, .7);
 }
 
-.show-wrapper {
-  background-color: grey;
-  border: 2px solid black;
-}
-
 .main-wrap {
-  background-color: rgba(43, 44, 46, .7);
+  background-color: rgba(43, 44, 46, .8);
+  margin-top: 25px;
 }
 
 .nav-color {
@@ -55,6 +95,13 @@ a {
   box-shadow: 10px 10px 5px #080704;
 }
 
+.comment-wrap {
+  background-color: rgba(41,34,20, .8);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 10px 10px 5px #080704;
+}
+
 .img-size {
   height: 150px;
   width: 150px;
@@ -62,7 +109,7 @@ a {
 }
 
 .thumb-wrapper {
-  background-color: rgb(62, 65, 77);
+  background-color: rgba(62, 65, 77, .5);
   margin: 17px;
   width: 200px;
   box-shadow: 10px 10px 5px #080704;
