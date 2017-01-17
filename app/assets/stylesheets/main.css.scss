@@ -3,8 +3,8 @@
 @import "bootstrap";
 
 body {
-  // background-color: rgb(86,71,36);
-  // background-image: url('life.jpg');
+  // background-color: #343734;
+  background-image: url('wood.jpg');
   // background-size: cover;
   // background-repeat: no-repeat;
   font-family: 'Lora', serif;
@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: #DCA31B;
+  color: #BDBA93;
   font-size: 20px;
 }
 
@@ -31,8 +31,17 @@ a {
   cursor: default;
 }
 
+.main-nav {
+  background-color: rgba(43, 44, 46, .7);
+}
+
+.show-wrapper {
+  background-color: grey;
+  border: 2px solid black;
+}
+
 .main-wrap {
-  background-color: rgba(155,155,155,.8);
+  background-color: rgba(43, 44, 46, .7);
 }
 
 .nav-color {
@@ -53,7 +62,7 @@ a {
 }
 
 .thumb-wrapper {
-  background-color: rgba(52, 76, 32, .5);
+  background-color: rgb(62, 65, 77);
   margin: 17px;
   width: 200px;
   box-shadow: 10px 10px 5px #080704;
@@ -82,7 +91,7 @@ a {
 }
 
 .t-wrap {
-  background-color: rgb(41,34,20);
+  background-color: rgba(43, 44, 46, .7);
 }
 
 
