@@ -71,7 +71,8 @@ h5 {
   width: 500px;
   margin-top: 10px;
   box-shadow: 10px 10px 5px #080704;
-  border-radius: 25px;
+  border: 2px solid black;
+
 }
 
 .comment-input {
@@ -135,7 +136,7 @@ h5 {
 }
 
 .thumb-wrapper {
-  background-color: rgba(13,146,207,.9);
+  background-color: rgb(120,213,227);
   margin: 17px;
   width: 200px;
   box-shadow: 10px 10px 5px #080704;
