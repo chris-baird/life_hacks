@@ -43,7 +43,6 @@
             <% if c.user == current_user %>
               <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
-            <hr>
           </div>
         </li>
       <% end %>
