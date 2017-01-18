@@ -1,12 +1,16 @@
-<%= form_for @hack, html: { multipart: true } do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %><br>
-
-  <%= form.label :body %>
-  <%= form.text_area :body %><br>
-
-  <%= form.file_field :image %><br><br>
-
-  <%= form.submit 'Submit' %>
-<% end %>
+<div class="jumbotron text-center sign-up-form">
+  <h1>Submit new Life Hack</h1>
+  <hr>
+  <%= form_for @hack, html: { multipart: true } do |form| %>
+    <h4><%= form.label :name %></h4>
+    <%= form.text_field :name, :required => true %>
+    <br>
+    <h4><%= form.label "Description" %></h4>
+    <%= form.text_area :body, :required => true %>
+    <br>
+    <%= form.file_field :image, :required => true, id: "file-field" %>
+    <br>
+    <%= form.submit 'Submit', class: "btn btn-success" %>
+  <% end %>
+</div>
 
