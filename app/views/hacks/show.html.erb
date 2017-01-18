@@ -26,7 +26,7 @@
     <div class="row">
       <div class="center-block">
         <%= form_for [@hack, @comment] do |form| %>
-        <%= form.text_area :body, rows: '6', cols: '50', id: "comment-body", class: "comment-input form-control", placeholder: 'Write a comment!' %><br>
+        <%= form.text_area :body, rows: '6', cols: '50', id: "comment-body", :required => true, class: "comment-input form-control", placeholder: 'Write a comment!' %><br>
         <%= form.submit 'Submit Comment', id: "comment-btn", class: "center-block btn btn-primary" %>
       </div>
     </div>
