@@ -1,5 +1,5 @@
 <div class="jumbotron text-center sign-up-form">
-  <u><h1 class="new-user-h">Create Account</h1></u>
+  <u><h1 class="new-user-h">New Account</h1></u>
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
@@ -30,7 +30,8 @@
             <%= f.label :password_confirmation, class: "control-label new-form-bold" %><br>
             <%= f.password_field :password_confirmation, class: "controls", placeholder: "Confirm Password" %>
           </div>
-          <div class="actions"><%= f.submit %></div>
+          <hr>
+          <div class="actions"><%= f.submit 'Create Account', :class => "btn btn-success" %></div>
         <% end %>
       </form>
     </div>
