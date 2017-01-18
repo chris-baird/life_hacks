@@ -1,34 +1,43 @@
-<h1>Sign Up</h1>
-
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
+<div class="jumbotron text-center sign-up-form">
+  <u><h1 class="new-user-h">Create Account</h1></u>
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <%= f.label :name, class: "control-label new-form-bold" %><br>
+            <%= f.text_field :name, class: "controls", placeholder: "Name" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, class: "control-label new-form-bold" %><br>
+            <%= f.text_field :email, class: "controls", placeholder: "Email" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, class: "control-label new-form-bold" %><br>
+            <%= f.password_field :password, class: "controls", placeholder: "Password" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation, class: "control-label new-form-bold" %><br>
+            <%= f.password_field :password_confirmation, class: "controls", placeholder: "Confirm Password" %>
+          </div>
+          <div class="actions"><%= f.submit %></div>
         <% end %>
-      </ul>
+      </form>
     </div>
-  <% end %>
-  <form>
-    <div class="form-group">
-      <%= f.label :name, class: "control-label" %>
-      <%= f.text_field :name, class: "controls" %>
+    <div class="col-md-6">
+      <u><h2><strong>Create Account to:</strong></h2></u>
+      <p>-Upload new LifeHacks</p>
+      <p>-Comment on LifeHacks</p>
     </div>
-    <div class="form-group">
-      <%= f.label :email, class: "control-label" %>
-      <%= f.text_field :email, class: "controls" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password, class: "control-label" %>
-      <%= f.password_field :password, class: "controls" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password_confirmation, class: "control-label" %>
-      <%= f.password_field :password_confirmation, class: "controls" %>
-    </div>
-    <div class="actions btn btn-default"><%= f.submit %></div>
-  <% end %>
-</form>
-
+  </div>
+</div>
