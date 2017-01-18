@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div id="show-wrap-main" class="container main-wrap-show">
+<div id="show-wrap-main" class="container main-wrap-show panel-footer">
   <div class="container text-center show-title">
     <u><h2 id="show-name" class="text-center"><%= @hack.name %></h2></u>
     <p class="text-center">by: <%= @hack.user.name %></p>
@@ -17,7 +17,7 @@
     </div>
     </div>
     <div id="hack-info-desc" class="col-lg-12 text-center">
-      <u><h3>Description:</h3></u>
+      <u><h2>Description:</h2></u>
       <p><%= @hack.body %></p>
       <hr>
     </div>
@@ -37,8 +37,9 @@
       <u><h3>Comments:</h3></u>
       <% @hack.comments.each do |c| %>
         <li>
-          <div class="comment-body">
-            <p>@<%= c.user.name %><br> <small><%= c.body %></small></p>
+          <div class="comment-body panel panel-primary">
+            <div class="panel-heading">@<%= c.user.name %></div>
+            <div class="panel-body"><%= c.body %></div>
             <% if c.user == current_user %>
               <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>

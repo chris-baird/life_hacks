@@ -1,14 +1,16 @@
-<h1>Log In</h1>
-<p id="alert"><%= alert %></p>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
-  <%= link_to 'Go Back', hacks_path %>
-<% end %>
+<div class="jumbotron text-center sign-up-form">
+  <h1>Log In</h1>
+  <hr>
+  <p id="alert"><%= alert %></p>
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <%= label_tag :email %><br>
+      <%= text_field_tag :email, params[:email] %>
+    </div>
+    <div class="field">
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+    </div>
+    <div class="actions"><%= submit_tag "Log In", class: "btn btn-success" %></div>
+  <% end %>
+</div>

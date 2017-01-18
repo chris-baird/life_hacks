@@ -1,5 +1,6 @@
 <div class="jumbotron text-center sign-up-form">
-  <u><h1 class="new-user-h">New Account</h1></u>
+  <h1>New Account</h1>
+  <hr class="new-user-h">
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
