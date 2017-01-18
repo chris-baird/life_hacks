@@ -15,11 +15,11 @@
   <hr>
     <div class="row text-center t-wrap">
     <% @hacks.each do |hack| %>
-        <div class="col-md-2 thumb-wrapper">
-          <h4><%= hack.name %></h4>
-          <%= image_tag hack.image.url, :class => 'img-responsive img-size' %>
+        <div class="col-md-2 thumb-wrapper well well-sm">
+          <u><h4><%= hack.name %></h4></u>
+          <%= image_tag hack.image.url, :class => 'img-responsive img-size thumbnail' %>
           <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-success btn-xs more-info center-block' %>
-          <h5>@<%= hack.user.name %></h5>
+          <u><h5>@<%= hack.user.name %></h5></u>
         </div>
     <% end %>
     </div>

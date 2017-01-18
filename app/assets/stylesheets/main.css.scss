@@ -3,6 +3,7 @@
 @import "bootstrap";
 
 body {
+  padding-top: 50px;
   background-color: #ffffff;
   // background-image: url('ab.jpg');
   // background-size: cover;
@@ -21,6 +22,15 @@ a {
 
 ul {
   list-style: none;
+}
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h5 {
+  margin-bottom: 5px;
 }
 
 #show-wrap-main {
@@ -84,7 +94,7 @@ ul {
 }
 
 .main-nav {
-  background-color: rgb(13,146,207);
+  background-color: rgba(13,146,207,.9);
 }
 
 .main-wrap-index {
@@ -124,6 +134,7 @@ ul {
   margin: 17px;
   width: 200px;
   box-shadow: 10px 10px 5px #080704;
+  padding-bottom: 3px;
 }
 
 .more-info {
