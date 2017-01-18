@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
-<div id="show-wrap-main" class="container main-wrap">
+<div id="show-wrap-main" class="container main-wrap-show">
   <div class="container text-center show-title">
-    <h2 id="show-name" class="text-center"><%= @hack.name %></h2>
+    <u><h2 id="show-name" class="text-center"><%= @hack.name %></h2></u>
     <p class="text-center">by: <%= @hack.user.name %></p>
+    <hr>
   </div>
     <div id="show-container" class="container text-center hack-info-page">
     <div class="row">
@@ -16,14 +17,24 @@
     </div>
     </div>
     <div id="hack-info-desc" class="col-lg-12 text-center">
-      <h3>Description:</h3>
+      <u><h3>Description:</h3></u>
       <p><%= @hack.body %></p>
+      <hr>
     </div>
   <div class="container">
+    <% if current_user %>
+    <div class="row">
+      <div class="center-block">
+        <%= form_for [@hack, @comment] do |form| %>
+        <%= form.text_area :body, rows: '6', cols: '50', id: "comment-body", class: "comment-input form-control", placeholder: 'Write a comment!' %><br>
+        <%= form.submit 'Submit Comment', id: "comment-btn", class: "center-block btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
+        <% end %>
 
-    <ul class="text-center col-md-12 comment-wrap">
-      <h3>Comments:</h3>
-      <hr>
+    <ul class="text-center comment-wrap">
+      <u><h3>Comments:</h3></u>
       <% @hack.comments.each do |c| %>
         <li>
           <div class="comment-body">
@@ -31,18 +42,11 @@
             <% if c.user == current_user %>
               <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
             <% end %>
+            <hr>
           </div>
         </li>
       <% end %>
     </ul>
 
-    <div class="row">
-      <div class="center-block">
-        <%= form_for [@hack, @comment] do |form| %>
-        <%= form.text_area :body, rows: '6', cols: '50', class: "comment-input form-control", placeholder: 'Write a comment!' %><br>
-        <%= form.submit 'Submit Comment', id: "comment-btn", class: "center-block" %>
-      </div>
-    </div>
-        <% end %>
   </div>
 </div>

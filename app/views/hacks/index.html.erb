@@ -1,24 +1,25 @@
 <p id="notice" class="text-center"><%= notice %></p>
 
-<div class="container main-wrap">
+<div class="container main-wrap-index">
   <ul class="nav nav-pills">
-    <li role="presentation" class="pull-left not-active"><a href="#">Sort By:</a></li>
-    <form class="navbar-form navbar-right " role="search">
+    <li role="presentation" id="sub-nav" class="pull-left not-active"><a href="#">Sort By:</a></li>
+    <form class="navbar-form navbar-right" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>
-      <button type="submit" class="btn btn-default">Search Life Hacks</button>
+      <button type="submit" class="btn btn-primary sub-nav">Search Life Hacks</button>
     </form>
-    <li role="presentation" class="pull-right"><a href="#">Date</a></li>
-    <li role="presentation" class="pull-right"><a href="#">Name</a></li>
+    <li role="presentation" class="pull-right"><%= link_to "Date", hacks_path(sort: 'created_at', desc: @desc) %></li>
+    <li role="presentation" class="pull-right"><%= link_to "Name", hacks_path(sort: 'name', desc: @desc) %></li>
   </ul>
+  <hr>
     <div class="row text-center t-wrap">
     <% @hacks.each do |hack| %>
         <div class="col-md-2 thumb-wrapper">
-          <h4><p><%= hack.name %></p></h4>
+          <h4><%= hack.name %></h4>
           <%= image_tag hack.image.url, :class => 'img-responsive img-size' %>
-          <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-primary btn-xs more-info center-block' %>
-          <h3><p>@<%= hack.user.name %></p></h3>
+          <%= link_to 'View Life Hack', hack_path(hack), :class => 'btn btn-success btn-xs more-info center-block' %>
+          <h5>@<%= hack.user.name %></h5>
         </div>
     <% end %>
     </div>
