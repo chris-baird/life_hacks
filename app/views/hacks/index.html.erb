@@ -15,7 +15,8 @@
   </ul>
     <div class="row text-center t-wrap">
     <% if @hacks.count == 0 %>
-      <p>No Hacks Match Your Search.</p>
+      <h3>No Hacks Match Your Search.</h3>
+      <%= link_to "Go Back", hacks_path, class: "btn btn-default" %>
     <% else %>
       <% @hacks.each do |hack| %>
         <%= link_to hack_path(hack) do %>
