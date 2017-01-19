@@ -1,6 +1,4 @@
 <div class="jumbotron text-center sign-up-form">
-  <h1>Submit new Life Hack</h1>
-  <hr>
   <%= form_for @hack, html: { multipart: true } do |form| %>
     <h4><%= form.label :name %></h4>
     <%= form.text_field :name, :required => true %>
@@ -8,9 +6,10 @@
     <h4><%= form.label "Description" %></h4>
     <%= form.text_area :body, :required => true %>
     <br>
-    <%= form.file_field :image, :required => true, id: "file-field" %>
+    <%= form.file_field :image, id: "file-field" %>
     <br>
     <%= form.submit 'Submit', class: "btn btn-success" %>
+    <%= link_to 'Go back', hacks_path, class: "btn btn-default" %>
   <% end %>
 </div>
 
