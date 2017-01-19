@@ -74,8 +74,8 @@ h5 {
   height: 500px;
   width: 500px;
   margin-top: 10px;
-  box-shadow: 10px 10px 5px #080704;
-  border: 2px solid black;
+  // box-shadow: 10px 10px 5px #080704;
+  border: 10px solid rgba(191,191,191,.5);
 
 }
 
@@ -145,12 +145,12 @@ h5 {
 }
 
 .thumb-wrapper {
-  background-color: rgba(13,146,207,.9);
+  background-color: rgba(191,191,191,.5);
   margin: 17px;
   width: 200px;
-  box-shadow: 10px 10px 5px #080704;
+  // box-shadow: 10px 10px 5px #080704;
   padding-bottom: 3px;
-  border-radius: 25px;
+  // border-radius: 25px;
 }
 
 .hack-name-wrap {
@@ -194,4 +194,8 @@ h5 {
 
 .btn-s-container {
   text-align: center;
+}
+
+a:hover {
+  color: maroon;
 }
