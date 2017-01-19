@@ -37,8 +37,8 @@
       <u><h3>Comments:</h3></u>
       <% @hack.comments.each do |c| %>
         <li>
-          <div class="comment-body panel panel-primary">
-            <div class="panel-heading">@<%= c.user.name %></div>
+          <div class="comment-body panel panel-default">
+            <div class="panel-heading">@<%= c.user.name %>&nbsp&nbsp|&nbsp&nbsp<%= c.created_at.localtime.strftime("%a %b %I:%M:%S %p") %></small></div>
             <div class="panel-body"><%= c.body %></div>
             <% if c.user == current_user %>
               <%= link_to "edit", edit_comment_path(c) %> | <%= link_to "delete", comment_path(c), method: :delete, data: {confirm: 'Are you sure?'} %>
@@ -47,6 +47,5 @@
         </li>
       <% end %>
     </ul>
-
   </div>
 </div>
