@@ -1,37 +1,36 @@
-<div class="jumbotron text-center sign-up-form">
-  <h1>New Account</h1>
+<div class="jumbotron  sign-up-form">
+  <h1 class="text-center">New Account</h1>
   <hr class="new-user-h">
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
-        <h2>Form is invalid</h2>
-        <ul>
+        <h2>Error:</h2>
+        <!-- <ul> -->
           <% for message in @user.errors.full_messages %>
-            <li><%= message %></li>
+            <small><%= message %></small><br>
           <% end %>
-        </ul>
+       <!--  </ul> -->
       </div>
     <% end %>
     <div class="row">
       <div class="col-md-6">
         <form>
           <div class="form-group">
-            <%= f.label :name, class: "control-label new-form-bold" %><br>
-            <%= f.text_field :name, class: "controls", placeholder: "Name" %>
+            <%= f.label "name:", class: "control-label new-form-bold" %><br>
+            <%= f.text_field :name, :required => true, class: "controls", placeholder: "Name" %>
           </div>
           <div class="form-group">
-            <%= f.label :email, class: "control-label new-form-bold" %><br>
-            <%= f.text_field :email, class: "controls", placeholder: "Email" %>
+            <%= f.label "email:", class: "control-label new-form-bold" %><br>
+            <%= f.text_field :email, :required => true, class: "controls", placeholder: "Email" %>
           </div>
           <div class="form-group">
-            <%= f.label :password, class: "control-label new-form-bold" %><br>
-            <%= f.password_field :password, class: "controls", placeholder: "Password" %>
+            <%= f.label "password:", class: "control-label new-form-bold" %><br>
+            <%= f.password_field :password, :required => true, class: "controls", placeholder: "Password" %>
           </div>
           <div class="form-group">
-            <%= f.label :password_confirmation, class: "control-label new-form-bold" %><br>
-            <%= f.password_field :password_confirmation, class: "controls", placeholder: "Confirm Password" %>
+            <%= f.label "Confirm Password:", class: "control-label new-form-bold" %><br>
+            <%= f.password_field :password_confirmation, :required => true, class: "controls", placeholder: "Confirm Password" %>
           </div>
-          <hr>
           <div class="actions"><%= f.submit 'Create Account', :class => "btn btn-success" %></div>
         <% end %>
       </form>
