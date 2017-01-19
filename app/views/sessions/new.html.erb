@@ -1,19 +1,21 @@
-<div class="jumbotron sign-up-form">
-  <h1 class="text-center">Log In</h1>
-  <hr>
-  <p id="alert"><%= alert %></p>
-  <div class="text-center">
-    <%= form_tag sessions_path do %>
-      <div class="field log-in">
-        <%= label_tag "email:" %><br>
-        <%= text_field_tag :email, params[:email] %>
-      </div>
-      <div class="field log-in">
-        <%= label_tag "password:" %><br>
-        <%= password_field_tag :password %>
-      </div>
-      <br>
-      <div class="actions"><%= submit_tag "Log In", class: "btn btn-success" %></div>
-    <% end %>
+<div class="container">
+  <div class="jumbotron sign-up-form">
+    <h1 class="text-center">Log In</h1>
+    <hr>
+    <p id="alert" class="text-center"><%= alert %></p>
+    <div class="text-center">
+      <%= form_tag sessions_path do %>
+        <div class="field log-in">
+          <%= label_tag "email:" %><br>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class="field log-in">
+          <%= label_tag "password:" %><br>
+          <%= password_field_tag :password %>
+        </div>
+        <br>
+        <div class="actions"><%= submit_tag "Log In", class: "btn btn-success" %></div>
+      <% end %>
+    </div>
   </div>
 </div>

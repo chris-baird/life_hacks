@@ -1,44 +1,46 @@
-<div class="jumbotron  sign-up-form">
-  <h1 class="text-center">New Account</h1>
-  <hr class="new-user-h">
-  <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <div class="error_messages">
-        <h2>Error:</h2>
-        <!-- <ul> -->
-          <% for message in @user.errors.full_messages %>
-            <small><%= message %></small><br>
+<div class="container">
+  <div class="jumbotron  sign-up-form">
+    <h1 class="text-center">New Account</h1>
+    <hr class="new-user-h">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Error:</h2>
+          <!-- <ul> -->
+            <% for message in @user.errors.full_messages %>
+              <small><%= message %></small><br>
+            <% end %>
+         <!--  </ul> -->
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <%= f.label "name:", class: "control-label new-form-bold" %><br>
+              <%= f.text_field :name, :required => true, class: "controls", placeholder: "Name" %>
+            </div>
+            <div class="form-group">
+              <%= f.label "email:", class: "control-label new-form-bold" %><br>
+              <%= f.text_field :email, :required => true, class: "controls", placeholder: "Email" %>
+            </div>
+            <div class="form-group">
+              <%= f.label "password:", class: "control-label new-form-bold" %><br>
+              <%= f.password_field :password, :required => true, class: "controls", placeholder: "Password" %>
+            </div>
+            <div class="form-group">
+              <%= f.label "Confirm Password:", class: "control-label new-form-bold" %><br>
+              <%= f.password_field :password_confirmation, :required => true, class: "controls", placeholder: "Confirm Password" %>
+            </div>
+            <div class="actions"><%= f.submit 'Create Account', :class => "btn btn-success" %></div>
           <% end %>
-       <!--  </ul> -->
+        </form>
       </div>
-    <% end %>
-    <div class="row">
       <div class="col-md-6">
-        <form>
-          <div class="form-group">
-            <%= f.label "name:", class: "control-label new-form-bold" %><br>
-            <%= f.text_field :name, :required => true, class: "controls", placeholder: "Name" %>
-          </div>
-          <div class="form-group">
-            <%= f.label "email:", class: "control-label new-form-bold" %><br>
-            <%= f.text_field :email, :required => true, class: "controls", placeholder: "Email" %>
-          </div>
-          <div class="form-group">
-            <%= f.label "password:", class: "control-label new-form-bold" %><br>
-            <%= f.password_field :password, :required => true, class: "controls", placeholder: "Password" %>
-          </div>
-          <div class="form-group">
-            <%= f.label "Confirm Password:", class: "control-label new-form-bold" %><br>
-            <%= f.password_field :password_confirmation, :required => true, class: "controls", placeholder: "Confirm Password" %>
-          </div>
-          <div class="actions"><%= f.submit 'Create Account', :class => "btn btn-success" %></div>
-        <% end %>
-      </form>
-    </div>
-    <div class="col-md-6">
-      <u><h2><strong>Create Account to:</strong></h2></u>
-      <p>-Upload new LifeHacks</p>
-      <p>-Comment on LifeHacks</p>
+        <u><h2><strong>Create Account to:</strong></h2></u>
+        <p>-Upload new LifeHacks</p>
+        <p>-Comment on LifeHacks</p>
+      </div>
     </div>
   </div>
 </div>
