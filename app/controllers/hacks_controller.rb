@@ -1,16 +1,18 @@
 class HacksController < ApplicationController
   before_action :set_hack, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:index, :show]
+
   def index
+    @hacks = Hack.search(params[:search])
     if params.key?(:sort)
       @desc = params[:desc] == 'true' ? 'false' : 'true'
       if params[:desc] == 'true'
-        @hacks = Hack.order("#{params[:sort]} DESC")
+        @hacks = @hacks.order("#{params[:sort]} DESC")
       else
-        @hacks = Hack.order("#{params[:sort]}")
+        @hacks = @hacks.order("#{params[:sort]}")
       end
     else
-      @hacks = Hack.order("created_at DESC")
+      @hacks = @hacks.order("created_at DESC")
     end
   end
 
