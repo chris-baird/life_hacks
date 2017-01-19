@@ -21,9 +21,9 @@
       <% @hacks.each do |hack| %>
         <%= link_to hack_path(hack) do %>
           <div class="col-md-2 thumb-wrapper well well-sm">
-            <u><h4><%= hack.name %></h4></u>
+            <h4 class="hack-name-wrap"><%= hack.name %></h4>
             <img src="<%= hack.image.url %>" class="img-responsive img-size thumbnail">
-            <u><h5>@<%= hack.user.name %></h5></u>
+            <h5>@<%= hack.user.name %></h5>
           </div>
         <% end %>
       <% end %>
