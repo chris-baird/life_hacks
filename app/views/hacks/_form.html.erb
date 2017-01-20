@@ -1,4 +1,6 @@
 <div class="jumbotron text-center sign-up-form">
+  <u><h1 class="text-center">Submit Life Hack</h1></u>
+  <hr>
   <%= form_for @hack, html: { multipart: true } do |form| %>
     <h4><%= form.label :name %></h4>
     <%= form.text_field :name, :required => true %>
