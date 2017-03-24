@@ -150,6 +150,17 @@ h5 {
   padding-bottom: 3px;
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .thumb-wrapper {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
 .hack-name-wrap {
   margin-bottom: 10px;
   font-weight: bolder;
