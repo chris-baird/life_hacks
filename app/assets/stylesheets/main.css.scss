@@ -170,9 +170,13 @@ h5 {
     font-size: 50px;
   }
 
-  .desc-span {
-   /* display: inline-block;*/
-    /*margin: 15px;*/
+  .main-search {
+    width: 78%;
+    display: inline-block;
+  }
+
+  .main-search-submit {
+    display: inline;
   }
 }
 

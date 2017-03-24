@@ -4,10 +4,10 @@
 <div class="container main-wrap-index panel-footer">
   <ul class="nav nav-tabs">
     <%= form_tag hacks_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
-      <div class="form-group">
+      <div class="form-group main-search">
           <%= text_field_tag :search, params[:search], class: "form-control" %>
       </div>
-      <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
+      <%= submit_tag "Search", :name => nil, class: "btn btn-default main-search-submit" %>
     <% end %>
     <li role="presentation" class="pull-left btn btn-success btn-xs"><%= link_to "New LifeHack", new_hack_path %></li>
     <!-- <span class="desc-span"> --><li role="presentation" class="pull-right desc-span"><%= link_to "Date", hacks_path(sort: 'created_at', desc: @desc) %></li></span>
