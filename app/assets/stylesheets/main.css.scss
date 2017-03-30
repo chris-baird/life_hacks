@@ -44,9 +44,6 @@ h5 {
 
 #show-go-back-btn {
   display: inline-block;
-  margin-top: 10px;
-  margin-left: 20px;
-  position: relative;
 }
 
 #show-wrap-main {
@@ -55,6 +52,7 @@ h5 {
 
 #show-name {
   margin: 5px;
+  display: inline-block;
 }
 
 #show-container {
@@ -157,6 +155,10 @@ h5 {
   padding-bottom: 3px;
 }
 
+#show-go-back-btn {
+  position: relative;
+}
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -172,9 +174,17 @@ h5 {
     display: none;
   }
 
+  #nav-new-hack-link {
+    float: left !important;
+  }
+
   .img-size {
     height: 300px;
     width: 300px;
+  }
+
+  .filter-links {
+    margin: 0 auto;
   }
 
   .hack-name-wrap {

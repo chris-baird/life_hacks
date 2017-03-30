@@ -2,18 +2,19 @@
 <p id="notice" class="text-center"><%= notice %></p>
 
 <div class="container main-wrap-index panel-footer">
+  <h2 class="text-center">All Life Hacks</h2>
   <ul class="nav nav-tabs">
     <!-- <li role="presentation" class="pull-left btn btn-success btn-xs"><%= link_to "New LifeHack", new_hack_path %></li> -->
-    <br><br>
     <%= form_tag hacks_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
       <div class="form-group main-search">
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
+          <%= text_field_tag :search, params[:search], class: "form-control", placeholder: 'Enter search term...' %>
       </div>
       <%= submit_tag "Search", :name => nil, class: "btn btn-default main-search-submit" %>
     <% end %>
+    <li role="presentation" class="pull-right desc-span"><%= link_to "View All", hacks_path(sort: 'created_at', desc: @desc) %></li></span>
     <li role="presentation" class="pull-right desc-span"><%= link_to "Date", hacks_path(sort: 'created_at', desc: @desc) %></li></span>
     <li role="presentation" class="pull-right desc-span"><%= link_to "Name", hacks_path(sort: 'name', desc: @desc) %></li></span>
-    <li role="presentation" id="sub-nav" class="pull-right not-active"><a href="#">Sort By:</a></li>
+    <!-- <li role="presentation" id="sub-nav" class="pull-right not-active"><a href="#">Sort By:</a></li> -->
   </ul>
     <div class="row text-center t-wrap">
     <% if @hacks.count == 0 %>
