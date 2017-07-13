@@ -23,7 +23,7 @@
     <% else %>
       <% @hacks.each do |hack| %>
         <%= link_to hack_path(hack) do %>
-          <div class="col-xs-12 col-sm-6 col-md-8 thumb-wrapper well well-sm">
+          <div class="col-xs-12 col-sm-12 col-md-8 thumb-wrapper well well-sm">
             <h4 class="hack-name-wrap"><%= hack.name %></h4>
             <img src="<%= hack.image.url %>" class="img-responsive img-size thumbnail">
             <h5>@<%= hack.user.name %></h5>
