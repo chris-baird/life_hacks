@@ -1,28 +1,41 @@
+# Life Hacks
 
-# LifeHacks.com
-## by Chris Baird
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Getting Started](#getting-started)
+* [Features](#features)
+* [Contact](#contact)
 
-### Description
-> Life hack (or life hacking) refers to any trick, shortcut, skill, or novelty method that increases productivity and efficiency, in all walks of life. The term was primarily used by computer experts who suffer from information overload or those with a playful curiosity in the ways they can accelerate their workflow in ways other than programming.
-![alt](http://i.imgur.com/XiieiPR.png)
+## General info
+Life hack (or life hacking) refers to any trick, shortcut, skill, or novelty method that increases productivity and efficiency, in all walks of life. The term was primarily used by computer experts who suffer from information overload or those with a playful curiosity in the ways they can accelerate their workflow in ways other than programming. 
 
-### Technologies Used
-1. HTML
-2. CSS
-3. Ruby
-4. Rails
-5. Bootstrap
+## Screenshots
+![alt](http://chrisbairddesign.com/assets/images/life-hacks.png)
 
-### Getting Started
-1. The Website can be reached  [Here](https://hacks-for-life.herokuapp.com/hacks)
-2. Create a new account.
-3. Start creating lifehacks of your own!
+![alt](http://chrisbairddesign.com/assets/images/life-hacks-signup.png)
 
-### Known bugs
-* Site is not responsive.
-* Long hack titles cause display issues.
+![alt](http://chrisbairddesign.com/assets/images/life-hacks-single.png)
 
-### Future updates
-* Add a profile page for users.
-* Add favorites
-* Add "likes" or "Votes" system
+
+
+## Technologies
+* HTML
+* CSS
+* Bootstrap
+* Ruby On Rails
+* PostgreSQL
+
+## Getting Started
+* The Website can be reached [Here](https://hacks-for-life.herokuapp.com/hacks)
+* Create a new account.
+* Start creating lifehacks of your own!
+
+## Features
+* User Authentication
+* Photo Storage
+* Comments Section
+
+## Contact
+Created by [Chris Baird](http://chrisbairddesign.com) - feel free to contact me!
